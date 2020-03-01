@@ -11,7 +11,7 @@ api = Api(app)
 api.add_resource(WeatherAPI, '/v1/weather', endpoint='weather')
 
 @app.errorhandler(400)
-def not_found(error):
+def bad_request(error):
     return make_response(jsonify( { 'error': 'Bad request' } ), 400)
 
 @app.errorhandler(404)

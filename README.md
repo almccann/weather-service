@@ -47,6 +47,5 @@ curl -u weather:fintechfintech http://localhost:8080/v1/weather?city=melbourne
 ```
 
 # TODO
-* external data source memoisation
-* mock external data sources and test weather_source.py
+* mock external data sources and test weather_source.py and in-memory cache
 * restart app on crash or when docker volume changes files
