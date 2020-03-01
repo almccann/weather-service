@@ -13,7 +13,7 @@ Each service is located within `./services` directory. The containerised environ
 * Docker volumes to speed up local development.
 
 ## Methodologies
-* Do not check in production .env file: production environment variables must be provided by the production environment
+* Do not check in production `.env` file: production environment variables must be provided by the production environment
 
 # Initialisation
 * `git clone git@github.com:almccann/weather-service.git`
@@ -47,5 +47,6 @@ curl -u weather:fintechfintech http://localhost:8080/v1/weather?city=melbourne
 ```
 
 # TODO
-* handle multiple data sources
-* memoisation
+* external data source memoisation
+* mock external data sources and test weather_source.py
+* restart app on crash or when docker volume changes files

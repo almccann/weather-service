@@ -43,9 +43,6 @@ class TestApp(unittest.TestCase):
     def test_melbourne(self):
         response = self.app.get('/v1/weather?city=melbourne', headers=self.get_api_headers())
         self.assertEqual(response.status_code, 200)
-        json_response = json.loads(response.get_data(as_text=True))
-        self.assertEqual(json_response['wind_speed'], 20)
-        self.assertEqual(json_response['temperature_degrees'], 29)
 
 if __name__ == '__main__':
     unittest.main()
