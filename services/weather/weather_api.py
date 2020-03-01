@@ -13,7 +13,7 @@ class WeatherAPI(Resource):
     def __init__(self):
         self.reqparse = reqparse.RequestParser()
         self.reqparse.add_argument('city', type=str, required=True,
-                                   help='city required',
+                                   help='City required',
                                    location='args')
         super(WeatherAPI, self).__init__()
 

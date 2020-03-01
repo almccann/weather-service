@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, make_response
 from flask_restful import Api
 from weather_api import WeatherAPI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__, static_url_path="")
 api = Api(app)

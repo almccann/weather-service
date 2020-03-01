@@ -12,9 +12,12 @@ Each service is located within `./services` directory. The containerised environ
 * docker and docker-compose to containerise application services.
 * Docker volumes to speed up local development.
 
+## Methodologies
+* Do not check in production .env file: production environment variables must be provided by the production environment
+
 # Initialisation
 * `git clone git@github.com:almccann/weather-service.git`
-* `make build` to build docker images. This only needs to be run the first time or when the image must be rebuilt after changing dependencies
+* `make build` to build docker images. This only needs to be run the first time or when the image must be rebuilt after changing dependencies or environment variables
 * `make dev` to start the application stack
 * `make clean` to stop the application stack
 * `make test` to run test suite
@@ -29,8 +32,9 @@ password:fintechfintech
 
 ## Endpoints
 Request:
-`get /v1/weather?city=melbourne`
-
+```
+get /v1/weather?city=melbourne
+```
 Response:
 ```
 {
@@ -38,9 +42,10 @@ Response:
   "temperature_degrees": 29
 }
 ```
-`curl -u weather:fintechfintech http://localhost:8080/v1/weather?city=melbourne`
+```
+curl -u weather:fintechfintech http://localhost:8080/v1/weather?city=melbourne
+```
 
 # TODO
-* put authentication and data source tokens into env
 * handle multiple data sources
 * memoisation
